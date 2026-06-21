@@ -1,0 +1,24 @@
+{
+  "schema_version": "bell_mipt_toy_v0",
+  "model": "finite_kitaev_chain",
+  "sites": 6,
+  "boundary": "periodic",
+  "parameters": {
+    "mu": 1.0,
+    "t": 1.0,
+    "delta": 0.5
+  },
+  "initial_state": {
+    "type": "random_normalized",
+    "seed": 12345
+  },
+  "time": {
+    "dt": 0.001,
+    "steps": 1000
+  },
+  "audit": {
+    "hermitian_tolerance": 1e-10,
+    "norm_tolerance": 1e-8,
+    "equivariance_tolerance": 1e-5
+  }
+}

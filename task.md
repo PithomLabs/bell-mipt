@@ -1,0 +1,17 @@
+- [x] 1. go.mod + bellmipt.json
+- [x] 2. Config / defaults / validation (config.go, config_test.go)
+- [x] 3. Basis (basis.go, basis_test.go)
+- [x] 4. Fermion operators + anticommutation (fermion.go, fermion_test.go)
+- [x] 5. Dense matrix type (Matrix in hamiltonian.go)
+- [x] 6. Hamiltonian construction + Hermiticity (hamiltonian.go, hamiltonian_test.go)
+- [x] 7. Initial state generation (state helpers in run.go or evolve.go)
+- [x] 8. Bell current + antisymmetry (current.go, current_test.go)
+- [x] 9. Bell rates + nonnegativity (rates.go, rates_test.go)
+- [x] 10. Derivative and joint RK4 (evolve.go, evolve_test.go)
+- [x] 11. Equivariance audit (audit.go, audit_test.go)
+- [x] 12. Report JSON (report.go)
+- [x] 13. Report Markdown (markdown.go)
+- [x] 14. Forbidden-language audit (forbidden.go, report_test.go)
+- [x] 15. Run orchestrator (run.go)
+- [x] 16. cmd/bellmipt main (main.go)
+- [x] 17. Final validation: go vet, go test, go run

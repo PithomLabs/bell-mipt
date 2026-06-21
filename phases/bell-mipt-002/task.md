@@ -1,0 +1,35 @@
+- `[x]` Phase 0: Pre-implementation
+  - `[x]` Define tests first (test-driven development).
+  - `[x]` Confirm QIndex/QConfig mapping.
+  - `[x]` Confirm existing probability floor.
+- `[x]` Phase 1: Config and validation
+  - `[x]` Add BridgeConfig.
+  - `[x]` Add bridge config validation.
+  - `[x]` Add bridge-disabled regression test.
+- `[x]` Phase 2: Site split and projector
+  - `[x]` Implement SiteSplit.
+  - `[x]` Implement SplitConfig and CombineConfig.
+  - `[x]` Implement ConditionalProjector.
+- `[x]` Phase 3: Conditional vector
+  - `[x]` Implement environment-projected conditional vector.
+  - `[x]` Implement fidelity ($F = |\langle a|b \rangle|^2$).
+  - `[x]` Add norm failure logic (`ConditionalNormFloor = 1e-12`).
+- `[x]` Phase 4: Trajectory sampler
+  - `[x]` Implement SampleDiscrete.
+  - `[x]` Implement StepBellConfiguration.
+  - `[x]` Implement max_lambda_dt.
+  - `[x]` Implement near-zero probability guard.
+  - `[x]` Implement deterministic RNG.
+- `[x]` Phase 5: Bridge metrics
+  - `[x]` Implement strict jump classification.
+  - `[x]` Implement boundary-crossing exclusion.
+  - `[x]` Implement primary ratio null-gating.
+  - `[x]` Implement empirical trajectory equivariance.
+- `[x]` Phase 6: Reports
+  - `[x]` Add bridge report schema and warnings.
+  - `[x]` Add limitations.
+  - `[x]` Extend forbidden audit.
+- `[x]` Phase 7: Validation
+  - `[x]` Run all tests.
+  - `[x]` Run default and bridge-enabled CLI.
+  - `[x]` Review report artifacts.

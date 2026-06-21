@@ -1,0 +1,124 @@
+{
+  "schema_version": "bell_mipt_report_v0_2a",
+  "toy_id": "BELL-MIPT-0001",
+  "toy_analysis_only": true,
+  "physics_claim": "none",
+  "model": "finite_kitaev_chain",
+  "sites": 6,
+  "hilbert_dim": 64,
+  "boundary": "periodic",
+  "goal": "compute_bell_rates_and_verify_equivariance",
+  "goal_status": "toy_goal_passed",
+  "checks": {
+    "hamiltonian_hermitian": true,
+    "state_norm_preserved": true,
+    "rho_sum_preserved": true,
+    "current_antisymmetric": true,
+    "rates_nonnegative": true,
+    "equivariance_error_within_tolerance": true,
+    "no_nan_or_inf": true,
+    "forbidden_language_passed": true
+  },
+  "metrics": {
+    "max_hermitian_error": 0,
+    "max_norm_error": 1.8107737531636303e-13,
+    "max_rho_sum_error": 7.771561172376096e-16,
+    "max_rho_negative_violation": 0,
+    "max_current_antisymmetry_error": 0,
+    "max_rate_negative_violation": 0,
+    "max_equivariance_l1_error": 3.1349902085116635e-11,
+    "final_equivariance_l1_error": 1.783272157327917e-11,
+    "mean_equivariance_l1_error": 1.5421527074542867e-11,
+    "mean_total_bell_activity": 2.412968835159808,
+    "max_total_bell_activity": 2.463512402383309,
+    "probability_floor_hits": 0
+  },
+  "debt_status": {
+    "needFaithfulnessReview": "source_code_review_required_for_0002A",
+    "needInvariant": "partially_paid_equivariance_plus_descriptive_empirical_trajectory_check",
+    "needMap": "partially_paid_environment_projected_conditional_vector_toy_only",
+    "needNullModel": "unpaid",
+    "needObstruction": "bell_jumps_are_not_measurements",
+    "needToyCheck": "partially_paid_rate_algebra_and_conditional_vector_toy"
+  },
+  "limitations": [
+    "This checks Bell-rate algebra in a finite toy model only.",
+    "This does not implement MIPT.",
+    "This does not show Bell jumps are measurements.",
+    "This does not construct a conditional-wave-function bridge.",
+    "This does not support any holography or black-hole claim.",
+    "This is not a physics promotion."
+  ],
+  "forbidden_language_audit": {
+    "passed": true,
+    "hits": null
+  },
+  "bridge": {
+    "enabled": true,
+    "bridge_goal": "sample_bell_trajectories_and_audit_environment_projected_conditional_vectors",
+    "bridge_status": "bridge_audit_completed",
+    "subsystem_sites_requested": [
+      0,
+      2,
+      5
+    ],
+    "environment_sites_requested": [
+      1,
+      3,
+      4
+    ],
+    "subsystem_sites_canonical": [
+      0,
+      2,
+      5
+    ],
+    "environment_sites_canonical": [
+      1,
+      3,
+      4
+    ],
+    "trajectories": 200,
+    "sample_every_steps": 1,
+    "metrics": {
+      "trajectory_count": 200,
+      "mean_jump_count": 2.39,
+      "mean_strict_environment_jump_count": 0.375,
+      "mean_strict_subsystem_jump_count": 0.36,
+      "mean_boundary_crossing_jump_count": 1.655,
+      "conditional_norm_failures": 0,
+      "mean_fidelity_drop_at_strict_environment_jumps": 0.8785681522629386,
+      "mean_fidelity_drop_at_strict_subsystem_jumps": 0.0000041483880651788715,
+      "mean_fidelity_drop_at_boundary_crossing_jumps": 0.8878234255843717,
+      "mean_fidelity_drop_no_jump": 0.000004047050810602201,
+      "mean_fidelity_drop_at_any_jumps": 0.7526411380169203,
+      "conditional_update_ratio": 217088.49070076479,
+      "conditional_update_ratio_status": "available",
+      "conditional_update_ratio_env_event_count": 75,
+      "conditional_update_ratio_no_jump_event_count": 199522,
+      "initial_empirical_equivariance_l1": 0.4377269240776656,
+      "max_empirical_equivariance_l1": 0.4615339524450977,
+      "final_empirical_equivariance_l1": 0.34554195201102483,
+      "max_lambda_dt": 0.01669145661361399,
+      "near_zero_current_configuration_probability_count": 0,
+      "strict_environment_jump_transitions": 75,
+      "strict_subsystem_jump_transitions": 72,
+      "boundary_crossing_jump_transitions": 331,
+      "no_jump_transitions": 199522,
+      "any_jump_transitions": 478
+    },
+    "interpretation": {
+      "environment_correlated_conditional_update": "candidate_correlation",
+      "reason": "Descriptive finite-toy diagnostic only. This does not establish a Bell-MIPT bridge."
+    },
+    "warnings": [
+      {
+        "code": "jordan_wigner_partition_convention",
+        "message": "Conditional vectors are projected in the canonical occupation basis. No additional Jordan-Wigner sign is applied during projection; all phases are inherited from the full wavefunction amplitudes."
+      },
+      {
+        "code": "boundary_crossing_jumps_observed",
+        "message": "boundary_crossing jumps occurred"
+      }
+    ]
+  }
+}
