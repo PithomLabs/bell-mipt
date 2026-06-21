@@ -1,0 +1,32 @@
+{
+  "schema_version": "bell_mipt_toy_v0",
+  "model": "finite_kitaev_chain",
+  "sites": 6,
+  "boundary": "periodic",
+  "parameters": {
+    "mu": 1.0,
+    "t": 1.0,
+    "delta": 0.5
+  },
+  "initial_state": {
+    "type": "random_normalized",
+    "seed": 12345
+  },
+  "time": {
+    "dt": 0.001,
+    "steps": 1000
+  },
+  "audit": {
+    "hermitian_tolerance": 1e-10,
+    "norm_tolerance": 1e-8,
+    "equivariance_tolerance": 1e-5
+  },
+  "bridge": {
+    "enabled": true,
+    "subsystem_sites": [0, 2, 5],
+    "environment_sites": [1, 3, 4],
+    "trajectories": 200,
+    "seed": 42,
+    "sample_every_steps": 1
+  }
+}
